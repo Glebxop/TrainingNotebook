@@ -1,0 +1,19 @@
+<template>
+  <lightning-card key={exercise.Id}>
+    <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-size_4-of-12">
+        {exercise.exName}
+      </div>
+      <template if:true={isCount}>
+        <div class="slds-col slds-size_4-of-12">
+          {exercise.count}
+        </div>
+      </template>
+      <template if:true={isTime}>
+        <div class="slds-col slds-size_4-of-12">
+          {exercise.timeOfEx}
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

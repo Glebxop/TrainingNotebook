@@ -1,0 +1,22 @@
+<template>
+  <div>
+    <img width="100" height="55" src={exercise.Picture__c} />
+    <div class="slds-text-heading_large">{createTimeString}</div>
+  </div>
+
+  <template if:true={isCount}>
+    <lightning-input
+      type="number"
+      placeholder="type here count..."
+      onchange={countM}
+    ></lightning-input
+  ></template>
+  <template if:true={isTime}>
+    <lightning-input
+      type="text"
+      placeholder="type here time..."
+      onchange={timeM}
+    ></lightning-input>
+  </template>
+  <lightning-button label="Save" onclick={save}></lightning-button>
+</template>

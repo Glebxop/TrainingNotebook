@@ -1,0 +1,12 @@
+<template>
+  <lightning-card
+    class="cardExercise"
+    key={exercise.Id}
+    onclick={click}
+    title={exercise.Name}
+  >
+    <div class="divImg slds-align-absolute-center">
+      <img src={exercise.Picture__c} />
+    </div>
+  </lightning-card>
+</template>

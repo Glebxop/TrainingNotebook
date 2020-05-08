@@ -1,0 +1,19 @@
+<template>
+  <template if:false={isTrainingLook}>
+    <lightning-card onclick={showFullTraining} title={training.TrainingDate__c}>
+      <template for:each={training.ExcerciseInTrains__r} for:item="tr">
+        {tr.Excercise__r.Name};&nbsp;&nbsp;
+      </template>
+    </lightning-card>
+  </template>
+
+  <template if:true={isTrainingLook}>
+    <lightning-card onclick={showFullTraining} title={training.TrainingDate__c}>
+      <template for:each={training.ExcerciseInTrains__r} for:item="tr">
+        <div class="slds-align_absolute-center" key={training.Id}>
+          {tr.Excercise__r.Name}-{tr.Count__c} {tr.Time__c};<br />
+        </div>
+      </template>
+    </lightning-card>
+  </template>
+</template>

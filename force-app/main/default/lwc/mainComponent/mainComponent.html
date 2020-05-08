@@ -1,0 +1,24 @@
+<template>
+  <template if:true={isCreateNewTrain}>
+    <lightning-button
+      label="Go to main and finish train"
+      onclick={finishTraining}
+    ></lightning-button>
+    <c-new-train></c-new-train>
+  </template>
+
+  <template if:true={areDetailsVisible}>
+    <div
+      onclick={newTraining}
+      class="newTrainingCard slds-text-body_regular slds-align_absolute-center"
+    >
+      New training
+    </div>
+    <div class="historyDiv slds-align_absolute-center">History:</div>
+    <c-training-list-component></c-training-list-component>
+  </template>
+
+  <template if:true={isNoOneTraining}>
+    NO ONE TRAINING
+  </template>
+</template>
